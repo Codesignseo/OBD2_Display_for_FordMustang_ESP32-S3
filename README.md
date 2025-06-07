@@ -55,79 +55,79 @@ If you are unfamiliar with Arduino, it’s pretty simple and there is a multitud
 
 Example: Device is placed on dashboard near windshield. By applying a projective film on the windshield, the LCD projects onto the windshield as a transparent holographic effect. You can also simply face the LCD display directly towards the driver if the holographic effect isn't bright enough. If so, comment out the C++ define MIRROR_TEXT_FOR_HOLOGRAPHIC_REFLECTION in the file OBD2_Display_for_FordMustang_ESP32-S3.ino, which is responsible for mirroring the fonts to be used as a reflection.
 
-![Demo](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/Demo_240p.gif?raw=true)
+![Demo](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/Demo_240p.gif?raw=true)
 
-![Demo](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/DashboardMount.jpg?raw=true)
+![Demo](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/DashboardMount.jpg?raw=true)
 --------------------------------
 
 A small design, coming in at 73mm x 48mm x 12mm
 
-![Design1](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/Design1.jpg?raw=true)
+![Design1](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/Design1.jpg?raw=true)
 
 --------------------------------
 
 OBD2 wires attatch at the back of the device using a convenient audio connector. A TRRS 4-pole connector has 4 wires, which is exactly what we need, two for power and two for CAN bus communication.
 
-![Design2](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/Design2.jpg?raw=true)
+![Design2](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/Design2.jpg?raw=true)
 
 --------------------------------
 
 Here's what's inside!
 
-![Design3](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/Design3.jpg?raw=true)
+![Design3](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/Design3.jpg?raw=true)
 
 --------------------------------
 
-![Design4](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/Design4.jpg?raw=true)
+![Design4](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/Design4.jpg?raw=true)
 
 --------------------------------
 
 I highly recommend using more expensive thin 28 AWG flexible silicone wires, since the space is limited between the components. It would of course be easier to use a custom PCB.
 
-![Design5](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/Design5.jpg?raw=true)
+![Design5](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/Design5.jpg?raw=true)
 
 --------------------------------
 
 You will need about 1.5m of wiring to reach from the car's OBD2 connector up to the windshield of the car. Only four OBD2 wires are required to reach the device, two for power and two for the high speed CAN bus communication. I used three different cables for this. First, an OBD2 splitter so that another device, e.g. a tuner device, can be attached while this device is used. Then I soldered a long USB data cable to the OBD2 connector cable. Make sure that you specifically buy a data cable and not a charging cable, since a charging cable won’t have extra data wires. From there, I then soldered a short piece of TRRS 4-pole audio connector cable to reach the device.
 
-![Design6](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/Design6.jpg?raw=true)
+![Design6](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/Design6.jpg?raw=true)
 
 --------------------------------
 
 This isn't required, but I wanted to make the footprint of the device smaller, so I cut off the wire connector on the SN65HVD230
 
-![CutSmaller](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/CutSmaller.jpg?raw=true)
+![CutSmaller](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/CutSmaller.jpg?raw=true)
 
 --------------------------------
 
 Each component fits neatly in the base of the 3D print, but it's useful to use a smudge of silicone sealant to keep them in place. The lid fits on top of the base, and that will simply slide into the dashboard mount. I used a small piece of double-sided tape to stick the mount onto the dashboard. For 3D printing, I used PETG which is more durable than PLA.
 
-![3DPrints](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/3DPrints.jpg?raw=true)
+![3DPrints](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/3DPrints.jpg?raw=true)
 
 --------------------------------
 
-![Components](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/Components.jpg?raw=true)
+![Components](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/Components.jpg?raw=true)
 
 --------------------------------
 
 NOTE: I opened up two different OBD2 cables and both had the same color coded thin wires, e.g. the green wire is connected to pin 6. But, I highly recommend to check if your wires are color coded the same way using a multimeter. This video might be helpful: https://youtu.be/-5xS5c7USjE?si=0HzdZcqJ7PLiXYwY
 
-![OBD2_Pins](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/OBD2_Pins.jpg?raw=true)
+![OBD2_Pins](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/OBD2_Pins.jpg?raw=true)
 
 --------------------------------
 
-![PowerDiagram](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/PowerDiagram.jpg?raw=true)
+![PowerDiagram](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/PowerDiagram.jpg?raw=true)
 
 --------------------------------
 
-![SN65HVD230](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/SN65HVD230.jpg?raw=true)
+![SN65HVD230](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/SN65HVD230.jpg?raw=true)
 
 --------------------------------
 
-![GC9A01](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/GC9A01.jpg?raw=true)
+![GC9A01](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/GC9A01.jpg?raw=true)
 
 --------------------------------
 
-![FullWireDiagram](https://github.com/ClaudeMarais/OBD2_Display_FordMustang_ESP32-S3/blob/main/Images/FullWireDiagram.jpg?raw=true)
+![FullWireDiagram](https://github.com/ClaudeMarais/OBD2_Display_for_FordMustang_ESP32-S3/blob/main/Images/FullWireDiagram.jpg?raw=true)
 
 --------------------------------
